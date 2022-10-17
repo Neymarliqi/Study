@@ -1,0 +1,100 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationStyle": "custom",
+				 "enablePullDownRefresh": true
+			}
+		}
+	    ,{
+            "path" : "pages/feeds/feeds",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "动态中心",
+                "enablePullDownRefresh": true
+            }
+        }
+        ,{
+            "path" : "pages/me/me",
+            "style" :                                                                                    
+            {
+                "navigationStyle": "custom",
+                "enablePullDownRefresh": true
+            } 
+        }
+        ,{
+            "path" : "pages/webview/webview",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"subPackages": [
+		  {
+			"root": "subpages",
+			"pages": [
+					{
+					"path": "feedinfo",
+					"style": {
+						"navigationBarTitleText": "动态详情",
+						"navigationBarBackgroundColor": "#FFFFFF",
+						"navigationBarTextStyle": "black",
+						"backgroundColor": "#FFFFFF"
+					}
+				},{
+					"path": "newinfo",
+					"style": {
+						"navigationStyle": "custom"
+					}
+				},{
+					"path": "setting/setting",
+					"style": {
+						"navigationBarTitleText": "个人设置"
+					}
+				},{
+					"path": "share",
+					"style": {
+						"navigationBarTitleText": "UGC发布"
+					}
+				} 
+		    ]
+		}
+	],
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "",
+		"navigationBarBackgroundColor": "#F8F8F8",
+		"backgroundColor": "#F8F8F8"
+	},
+	"tabBar": {
+		"color": "#000",
+		"selectedColor": "#0988BF",
+		"list": [
+			{
+				"iconPath": "static/tabbar-icons/index.png",
+				"selectedIconPath": "static/tabbar-icons/index_s.png",
+				"text": "首页",
+				"pagePath": "pages/index/index"
+			},
+			{
+				"iconPath": "static/tabbar-icons/feeds.png",
+				"selectedIconPath": "static/tabbar-icons/feeds_s.png",
+				"text": "动态",
+				"pagePath": "pages/feeds/feeds"
+			},
+			{
+				"iconPath": "static/tabbar-icons/me.png",
+				"selectedIconPath": "static/tabbar-icons/me_s.png",
+				"text": "我的",
+				"pagePath": "pages/me/me"
+			}
+		]
+	},
+	"easycom": {
+	   "^u-(.*)": "uview-ui/components/u-$1/u-$1.vue" // 匹配components目录内的vue文件
+	}
+}
